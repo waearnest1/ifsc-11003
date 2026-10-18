@@ -34,7 +34,7 @@ html {
   position: absolute;
   left: 10px;
   top: 10px;
-  background: #ffffff;
+  background: #000000;
   color: #172635;
   z-index: 9999;
   border-radius: 6px;
@@ -43,13 +43,15 @@ html {
 /* ------------------ Gloabal Styles --------------------- */
 
 body {
-  font-family: "Rubik", sans-serif;
+  font-family: "Comic Relief", sans-serif;
   margin:0;
+  background-color: #000000;
+  color: #ff0000;
 }
 
 header.primary{
-  background-color:#a8e6ba;
-  color:#ffffff;
+  background-color:#000000;
+  color:#ff0000;
   text-align:center;
   text-shadow:2px 2px #000000;
   /* Longform */
@@ -66,7 +68,7 @@ header.primary{
 }
 
 header.primary a{
-  color:#ffffff;
+  color:#ff0000;
   text-decoration:none;
 }
 
@@ -93,7 +95,7 @@ nav.primary ul li{
 }
 
 nav.primary ul li a{
-  background-color:rgba(0,0,0,.4);
+  background-color:rgba(223, 218, 218, 0.4);
   padding: 5px 7.5px;
   border: 2px solid #000000;
   border-radius: 8px;
@@ -105,7 +107,100 @@ nav.primary ul li a:hover{
 }
 
 
+/* Center the page content */
+.container {
+  width: 80vw;
+  max-width: 960px;
+  margin: 40px auto;
+}
 
+/* Keep images within their containers */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Introduction */
+#content {
+  line-height: 1.6;
+}
+
+/* Arrange posts in three columns */
+#blog {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+#blog > h2 {
+  grid-column: 1 / -1;
+}
+
+.post {
+  padding: 20px;
+  border: 1px solid #801d1d;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(175, 0, 0, 0.15);
+  color: #ff0101;
+}
+
+.post figure {
+  margin: 15px 0;
+}
+
+.post figure img {
+  display: block;
+  width: 100%;
+}
+
+.post figcaption,
+.post-date,
+.post-meta {
+  color: #000000;
+  font-size: 0.85rem;
+  color: #ff0505;
+}
+
+.post p {
+  line-height: 1.5;
+}
+
+/* Sidebar */
+aside {
+  background-color: #000000;
+  padding: 20px 0;
+  color: #ff0000;
+}
+
+aside .container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+.widget p {
+  line-height: 1.5;
+}
+
+/* Page footer */
+footer.primary {
+  background-color: #242424;
+  color: #000000;
+  text-align: center;
+  padding: 20px;
+}
+
+footer.primary p {
+  margin: 0;
+}
+
+/* Stack content on smaller screens */
+@media screen and (max-width: 700px) {
+  #blog,
+  aside .container {
+    grid-template-columns: 1fr;
+  }
+}
 
 
 /* Media Queries */
